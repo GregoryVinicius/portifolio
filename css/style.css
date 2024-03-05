@@ -1,0 +1,161 @@
+@import url(variable.css);
+
+*, *::before, *::after {
+padding: 0;
+margin: 0;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    background-color: #663333;
+    color: #faebd7;
+}
+
+.site-header, .site-footer{
+    background-color:#faebd7;
+    color: #663333;
+    padding: 20px 0;
+    margin: auto;
+}
+
+.main-navigation ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.main-navigation a{
+    color: #663333;
+    text-decoration: none;
+}
+
+.section{
+    padding: 50px 0;
+    animation: fadeIn 3s ease-in-out;
+}
+.main-link {
+    color: #faebd7;
+}
+.main-navigation li{
+    padding: 0 30px;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.profite-pic{
+    float: left;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px;
+}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.project-grid{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project-item{
+    width: 100%;
+    height: auto;
+    background-color: var(--primary-color)#663333;
+    border: 2px solid #faebd7;
+    border-radius: 8px; 
+    margin: 20px;
+}
+
+.project-item img{
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.project-item:hover{
+    background-color: #663333;
+    box-shadow: 0 0 15px #faebd7;
+    transition: box-shadow 0.3s;
+}
+
+.project-info{
+    padding: 10px;
+}
+
+.language-item{
+    width: 100%;
+    height: auto;
+    background-color: #663333;
+    border: 2px solid #faebd7;
+    border-radius: 8px; 
+    margin: 20px;
+    padding: 10px;
+}
+
+.education-item{
+    width: 100%;
+    height: auto;
+    background-color: #663333;
+    border: 2px solid #faebd7;
+    border-radius: 8px; 
+    margin: 20px;
+    padding: 10px;
+}
+
+/* .about-item{
+    width: 100%;
+    height: 20px;
+    background-color: #663333;
+    border: 2px solid #faebd7;
+    border-radius: 8px; 
+    margin: 20px;
+    padding: 10px;
+} */
+.contact-item{
+    width: 100%;
+    height: auto;
+    background-color: #663333;
+    border: 2px solid #faebd7;
+    border-radius: 8px; 
+    margin: 20px;
+    padding: 5px;
+}
+
+.contact-grid{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+@media screen and (max-width: 768px){
+    .main-navigation ul{
+        flex-direction: column;
+    }
+    .main-navigation li{
+        margin-bottom: 10px;
+        font-size: large;
+    }
+    .profite-pic{
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    .section{
+        text-align: center;
+    }
+}
+
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}    
+}
