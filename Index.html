@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="styles/styles.css" rel="stylesheet">
         <title>Portifólio Grégory Vinicius</title>
         <meta name="description" content="Portifolio Grégory Vinicius Clariano Silva">
         <meta name="keyword" content="desenvolvedor web, portifólio, 
@@ -13,11 +12,11 @@
         <meta property="og:description" content="Portfólio de">
         <meta property="og:image" content="URL_da_Imagem">
         <meta property="og:url" content="URL_da_Página">
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
         <style>
         </style>
     </head>
-    <body>
+    <body class="body" data-tema="dark">
 
         <header class="site-header">
             <div class="container">
@@ -28,6 +27,7 @@
                         <li><a href="#linguagens">Linguagens</a></li>
                         <li><a href="#formacao-academica">Formação Academica</a></li>
                         <li><a href="#contato">Contato</a></li>
+                        <a href="#" onclick="alterarTema()" id="linkAlterarTema">Altera tema</a>
                     </ul>
                 </nav>
             </div>
@@ -35,8 +35,8 @@
 
         <main class="container">
             <section id="sobre-mim" class="section" sobre-min>
-                <img class="profite-pic" src="foto-temporario.jpg" alt="Minha foto"></p>
-                <h1>Grégory Vinicius Clariano Silva</h1>
+                <img class="profite-pic" src="img/foto-temporario.jpg" alt="Minha foto"></p>
+                <h1 class="underscore">Grégory Vinicius Clariano Silva</h1>
                 <h2>Sobre Min</h2>
                 <p class="about-item">Me chamo Grégory Vinicius. Sou um estudante do curso de graduação de Engenharia de software no Instituto Federal do Paraná(IFPR) - Campus Paranavaí.</p>
             </section>
@@ -44,23 +44,23 @@
                 <h2>Projetos Desenvolvidos</h2>
                 <div class="project-grid">
                     <article class="project-item">
-                        <a class="main-link" href="https://github.com/GregoryVinicius/jogo-2d-poo.git"><img  src="projeto-jogo.png" alt="Imagem nave jogo"></a>
+                        <center><a class="main-link" href="https://github.com/GregoryVinicius/jogo-2d-poo.git"><img  src="img/projeto-jogo.png" alt="Imagem nave jogo"></a></center>
                         <div class="project-info">
-                            <h3>Projeto jogo nave</h3>
+                            <h3>Projeto jogo Nave</h3>
                             <p>Descrição do projeto</p>
                         </div>
                     </article>
                     <article class="project-item" >
-                        <a class="main-link" href="https://github.com/GregoryVinicius/Pong_GameMaker.git"><img src="projeto-pong (1).png" alt="Imagem pong jogo"></a>
+                        <center><a class="main-link" href="https://github.com/GregoryVinicius/Pong_GameMaker.git"><img src="img/projeto-pong (1).png" alt="Imagem pong jogo"></a></center>
                         <div class="project-info">
-                            <h3>Projeto jogo pong</h3>
+                            <h3>Projeto jogo Pong</h3>
                             <p>Descrição do projeto</p>
                         </div>
                     </article>
                     <article class="project-item">
-                        <img src="projeto-jogo.png" alt="Imagem nave jogo">
+                        <center><a class="main-link" href="https://github.com/GregoryVinicius/Confronto_dos_Lendarios.git"><img src="img/jogo-pokemon.jpg" alt="Imagem nave jogo"></a></center>
                         <div class="project-info">
-                            <h3>projeto ai</h3>
+                            <h3>Projeto Confronto dos Lendários</h3>
                             <p>Descrição do projeto</p>
                         </div>
                     </article>
@@ -86,7 +86,7 @@
             </section>
             <section id="formacao-academica"class="section">
                 <div>
-                    <h2>Seção de educação</h2>
+                    <h2>Formação Academica</h2>
                     <p class="education-item">Escola José Vaz de Carvalho - Ensino Fundamental - segunda a sexta</p>
                     <p class="education-item">Colegio Estadual do Campo Adelia Rossi Arnaldi - Ensino Medio - segunda a sexta</p>
                     <p class="education-item">Instituto Federal do Paraná (IFPR) - Campus Paranavaí - Graduação Engenharia de Software - segunda a sexta</p>
@@ -95,20 +95,32 @@
 	    <section id="contato" class="section" sobre-min>
 		<h2>Contato</h2>
 		<div class="contact-grid">
-		    <p class="contact-item"><a class="main-link" href="https://wa.me/qr/E3WTIFUJ4LWVL1">WhatsApp</a></p>
+		    <p class="contact-item"><a class="main-link" href="https://api.whatsapp.com/send?phone=5544988182089&text=Ol%C3%A1%20vi%20o%20seu%20portfolio">WhatsApp</a></p>
 		    <p class="contact-item"><a class="main-link" href="https://www.instagram.com/gregory_clariano?igsh=MW05eGEyemJ5dHlzZg==">Instagram</a></p>
-		    <p class="contact-item">Linkedin</p>
+		    <p class="contact-item"><a class="main-link" href="https://www.linkedin.com/in/grégory-vinicius-clariano-silva-3a2bb6210/">Linkedin</a></p>
 		    <p class="contact-item"><a class="main-link" href="https://github.com/GregoryVinicius">GitHub</a></p>
+            <p class="contact-item"><a class="main-link" href="#" onclick="copiarEmail()">E-mail</a></p>
+            <p class="contact-item"><a class="main-link" href="#" onclick="copiarTelefone()">Telefone de contato</a></p>
 		</div>
 	    </section>
         </main>
-
+        <script src="script.js"></script>
+        <div class="container">
+            <h1>Consulta de Repositorio</h1>
+            <input type="text" id="inputNomeUsuario" placeholder="Informe o nome do usuário"/>
+            <button onclick="consultarRepositorios()">
+                Consultar Repositorios
+            </button>
+            <span id="status"></span>
+            <ul id="listaRepositorios"></ul>
+        </div>
         <footer class="site-footer">
 
 	<p class="main-link">:) *-* :P :D D: :B </p>
 
+    <p class="footer-text">2024 Grégory Vinicius. Todos os direitos reservados.</p>
+
         </footer>
         
-
     </body>
 </html>
